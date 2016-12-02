@@ -28,6 +28,8 @@ public class Player : MonoBehaviour {
 	[SerializeField]
 	private int movementSpeed;
 
+	public static bool nexLv;
+
 	private bool facingRight;
 
 	// Use this for initialization
@@ -37,8 +39,9 @@ public class Player : MonoBehaviour {
 		facingRight = true;
 		blowingCircle= GameObject.Find("blow");
 		blowingCircle.SetActive(false);
+		nexLv=false;
 	}
-	
+
 	// Update is called once per frame
 	void Update (){
 		HandleInput();
@@ -51,6 +54,7 @@ public class Player : MonoBehaviour {
 		Flip (horizontal);
 		HandleBlow();
 		ResetValues();
+		Debug.Log(nexLv);
 	}
 
 	private void HandleMovement(float horizontal){
@@ -75,6 +79,11 @@ public class Player : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.LeftControl)){
 			blow=true;
 		}
+
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			nexLv = true;
+			StartCoroutine (upOff());
+		}
 	}
 
 	private void HandleBlow(){
@@ -83,7 +92,7 @@ public class Player : MonoBehaviour {
 			myRigidbody.velocity = Vector2.zero;
 			blowingCircle.SetActive(true);
 			StartCoroutine (blowingOff ());
-		} 
+		}
 
 	}
 
@@ -125,5 +134,9 @@ public class Player : MonoBehaviour {
 		myAnimator.ResetTrigger("blow");
 	}
 
-}
+	IEnumerator upOff(){
+		yield return new WaitForSeconds (0.3f);
+		nexLv = false;
+	}
 
+}
