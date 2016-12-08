@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{BFB2B3C8-4639-FF93-6C09-E794CFA7FAA1}") = "Alzbetas_castle", "Assembly-CSharp.csproj", "{8C7356DF-A8AD-F900-887C-8CAFF9F78B08}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alzbetas_castle", "alzbetas_castle.csproj", "{4C1922FB-35B4-814E-6A21-93489879D779}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8C7356DF-A8AD-F900-887C-8CAFF9F78B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C7356DF-A8AD-F900-887C-8CAFF9F78B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C7356DF-A8AD-F900-887C-8CAFF9F78B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C7356DF-A8AD-F900-887C-8CAFF9F78B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1922FB-35B4-814E-6A21-93489879D779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1922FB-35B4-814E-6A21-93489879D779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1922FB-35B4-814E-6A21-93489879D779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1922FB-35B4-814E-6A21-93489879D779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
