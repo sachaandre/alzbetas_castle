@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 		myAnimator = GetComponent<Animator>();
 		facingRight = true;
 		blowingCircle= GameObject.Find("blow");
-		blowingCircle.SetActive(false);
+        blowingCircle.SetActive(false);
 		nexLv=false;
 	}
 
@@ -54,8 +54,7 @@ public class Player : MonoBehaviour {
 		Flip (horizontal);
 		HandleBlow();
 		ResetValues();
-		Debug.Log(nexLv);
-	}
+    }
 
 	private void HandleMovement(float horizontal){
 		if ( isGrounded || airControl) {
