@@ -8,11 +8,13 @@ public class LitOff : MonoBehaviour {
 	private bool isBlown;
 	private Animator lAnimator;
 	private GameObject lamp;
+    private GameObject spotlight;
 	// Use this for initialization
 	void Start ()
 	{
 		lAnimator = GetComponent<Animator> ();
 		lamp = GameObject.Find ("Lamp[" + lampIndex + "]");
+        spotlight = lamp.transform.Find("Spotlight").gameObject;
 	}
 
 	void Update(){
@@ -33,6 +35,7 @@ public class LitOff : MonoBehaviour {
 		if (isBlown) {
 			lAnimator.SetBool ("off", true);
 			lamp.tag="LightOff";
+            spotlight.SetActive(false);
 		}
 	}
 }
