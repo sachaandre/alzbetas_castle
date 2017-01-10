@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour {
 
+
     [SerializeField]
-    private float posDep;
-    [SerializeField]
-    private float posArr;
+    private Transform posArr;
 
     private GameObject myPlayer;
     private Transform myPos;
+
 
 
     // Use this for initialization
@@ -28,7 +28,13 @@ public class Teleport : MonoBehaviour {
     {
         if (other.tag == "Blowing")
         {
-            Debug.Log("Hit");
+            StartCoroutine(TeleportLaunch());
         }
+    }
+
+    IEnumerator TeleportLaunch()
+    {
+        yield return new WaitForSeconds(0.3f);
+        myPos.position = posArr.position;
     }
 }
